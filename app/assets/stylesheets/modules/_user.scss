@@ -1,0 +1,149 @@
+.account-page {
+  padding-top: 20px;
+  padding-left: 20px;
+  h1 {
+    border-bottom: 5px solid #d65f4c;
+    font-size: 30px;
+    font-family:'impact';
+    padding-bottom: 5px;
+  }
+  .account-page__inner {
+    width: 880px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #fff;
+
+    .account-page__inner--header, .account-page__inner--bottom {
+      float: left;
+      width: 100%;
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+    b {
+      font-size: 14px;
+      color: red;
+    }
+  }
+
+  .account-page__header {
+    h2 {
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      font-size: 25px;
+      font-weight: 200px;
+      color: black;
+      text-align: center;
+      font-family: 'Osaka';
+      }
+
+    h5 {
+      float:right;
+      margin-bottom: 20px;
+      font-size:15px;
+      font-weight: 200;
+
+    }
+
+    .btn {
+      margin-top: 20px;
+      color: #fff;
+      background-color: #ccc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+
+  .field {
+    margin-bottom: 10px;
+
+    .field-label {
+      padding: 10px 0;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-weight: 200;
+      font-family: 'Osaka';
+
+      i {
+        font-size: 12px;
+      }
+    }
+
+    .field-input {
+      input {
+        width: 100%;
+        padding: 10px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+  }
+
+  input[type='submit'] {
+    float: right;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #d9333f;
+  }
+
+  .field-label {
+    .field_with_errors {
+      display: inline-block;
+      color: #d65f4c;
+      font-weight: 400;
+    }
+  }
+
+  .field-input {
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  h2 {
+    margin-bottom: 10px;
+    color: #d65f4c;
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
