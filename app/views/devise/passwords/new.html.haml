@@ -1,11 +1,11 @@
-#account-page.account-page
-  %h1 Market-App
-  .account-page__inner.clearfix
-    .account-page__inner--header.account-page__header
+#account-page.account-page__session
+  = link_to "F-gram", root_path, class: "h1"
+  .account-page__session__inner.clearfix
+    .account-page__session__inner--header.account-page__session__header
       %h2 パスワードを忘れましたか?
       %h5
-        = link_to "ログイン画面に戻る", new_session_path(resource_name),style: "color:blue"
-    .account-page__inner--bottom.user-form
+        = link_to "ログイン画面に戻る", new_session_path(resource_name),style: "color:black"
+    .account-page__session__inner--bottom.user-form
       %b ＊メールアドレスを入力してください
       = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
         = render "devise/shared/error_messages", resource: resource
