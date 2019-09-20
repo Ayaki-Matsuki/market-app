@@ -1,0 +1,29 @@
+.products__contents{
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+  padding-left: 30px;
+  .products__contents__side{
+    width:250px;
+    position: fixed;
+    background-color: #222222;
+    border-radius:5px;
+    padding: 30px;
+    .products__contents__side__category{
+      color: white;
+      font-size: 35px;
+      font-family:'HiraMinProN-W6';
+      
+      .products__contents__side__category__genre{
+      padding-top: 10px;
+
+        a{
+          display: block;
+          font-size: 15px;
+          padding-bottom:10px;
+        }      
+      }
+    }
+  }
+}

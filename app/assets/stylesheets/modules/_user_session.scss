@@ -1,27 +1,26 @@
-.account-page {
+.account-page__session {
   padding-top: 20px;
   padding-left: 20px;
   background: url("1234.jpg") fixed;
   background-size: cover;
-  height: 100%;
-  
+  height: 100vh;
+  box-sizing: border-box;
 
   .h1 {
     width: 100%;
     font-size: 40px;
     font-family:'HiraMinProN-W6';
-    color: white;
+    color:white;
     text-decoration: none;
     padding-left: 10px;
   }
-  .account-page__inner {
+  .account-page__session__inner {
     width: 880px;
     margin: 0 auto;
     padding: 60px;
     
-    
 
-    .account-page__inner--header, .account-page__inner--bottom {
+    .account-page__session__inner--header, .account-page__session__inner--bottom {
       float: left;
       width: 100%;
     }
@@ -36,7 +35,7 @@
     }
   }
 
-  .account-page__header {
+  .account-page__session__header {
     h2 {
       margin-bottom: 10px;
       letter-spacing: 3px;
@@ -45,6 +44,7 @@
       color:#222222;
       text-align: center;
       font-family:'HiraMinProN-W6';
+      
       }
 
     h5 {
@@ -130,29 +130,5 @@
         background-color: #d65f4c;
       }
     }
-  }
-}
-#error_explanation {
-  margin: 20px 0;
-  padding: 20px 30px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-
-  h2 {
-    margin-bottom: 10px;
-    color: #d65f4c;
-    font-size: 14px;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 17px;
-    list-style: square;
-  }
-
-  li {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
   }
 }

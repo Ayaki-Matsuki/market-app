@@ -1,11 +1,11 @@
-#account-page.account-page
-  %h1 Market-App
-  .account-page__inner.clearfix
-    .account-page__inner--header.account-page__header
+#account-page.account-page__session
+  = link_to "F-gram", root_path, class: "h1"
+  .account-page__session__inner.clearfix
+    .account-page__session__inner--header.account-page__session__header
       %h2 ログイン
       %h5
-        = link_to "新規会員登録の方", new_registration_path(resource_name),style: "color:blue"
-    .account-page__inner--bottom.user-form
+        = link_to "新規会員登録の方", new_registration_path(resource_name),style: "color:black"
+    .account-page__session__inner--bottom.user-form
       %b ＊メールアドレスとパスワードを入力してください
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         = render "devise/shared/error_messages", resource: resource
@@ -21,6 +21,6 @@
           .field-input
             = f.password_field :password, autocomplete: "off"
         .field
-          = link_to "パスワードを忘れた方", new_password_path(resource_name),style: "color:blue"
+          = link_to "パスワードを忘れた方", new_password_path(resource_name),style: "color:black"
           .actions
             = f.submit "ログイン", class: 'btn'

@@ -1,0 +1,16 @@
+.products__contents__main{
+  padding-left: 385px;
+  width: calc(100vw - 250px);
+  box-sizing: border-box;
+  height: 100%;
+  .products__contents__main__box{
+    box-sizing: border-box;
+    height: 310px;
+    width: 990px;
+    display: flex;
+    margin-bottom:20px;
+    .products__contents__main__box__image{
+      margin-right: 30px;
+    }
+  }
+}
