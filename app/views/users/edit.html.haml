@@ -1,0 +1,47 @@
+#account-page.account-page
+  .account-page__inner.clearfix
+    .account-page__inner--header.account-page__header
+      %h2 マイページ編集
+      %h5
+        = link_to "Back", :back, class: "back-btn"
+    .account-page__inner--bottom.user-form
+      = form_for(current_user) do |f|
+        .field
+          .field-label
+            = f.label :name, "氏名"
+          .field-input
+            = f.text_field :name, autofocus: true, autocomplete: "name"
+        .field
+          .field-label
+            = f.label :address, "住所"
+          .field-input
+            = f.text_field :address, placeholder: "例: 東京都 新宿区 高田馬場2-2-105" , autocomplete: "street-addres"
+        .field
+          .field-label
+            = f.label :phonenumber, "電話番号"
+          .field-input
+            = f.text_field :phonenumber, placeholder: "例: 090-1234-5678", autocomplete: "tel"
+        .field
+          .field-label
+            = f.label :email, "メールアドレス"
+          .field-input
+            = f.email_field :email, autocomplete: "email"
+        .field
+          .field-label
+            = f.label :password, "新しいパスワード"
+            %i <英数字8文字以上>
+          .field-input
+            = f.password_field :password, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :password_confirmation
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :current_password, "現在のパスワード"
+          .field-input
+            = f.password_field :current_password, autocomplete: "current-password"
+        .actions
+          = f.submit "編集する", class: 'btn'
+ 

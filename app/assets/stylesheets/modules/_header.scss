@@ -7,6 +7,7 @@
   .products__header__links{
     height: 35px;
     width:  100%;
+    border-bottom:1px solid rgb(202, 190, 190);
     &--btn{
       height: 35px;;
       display: flex;
@@ -30,7 +31,7 @@
     .products__header__top__left{
       height: 100px;
       box-sizing: border-box;
-      font-size: 40px;
+      font-size: 45px;
       width: 15%;
       font-family:'HiraMinProN-W6';
       color: white;
@@ -72,11 +73,18 @@
         color: white;
         margin-right: 15px; 
         font-size: 30px;
-        background-color:#222222;
         padding: 10px;
         border-radius:5px;
         margin-right: 30px;
-
+      }
+      .user-icon{
+        margin-left: 30px;
+        background-color:#222222;
+        color: white; 
+        font-size: 30px;
+        padding: 10px;
+        border-radius:5px;
+        margin-right: 30px;
       }
       .btn{
         margin: 0 10px;
