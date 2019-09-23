@@ -5,12 +5,14 @@
   height: 100%;
   .products__contents__main__box{
     box-sizing: border-box;
-    height: 310px;
     width: 990px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom:20px;
     .products__contents__main__box__image{
       margin-right: 30px;
+      margin-bottom: 30px;
+      height: 310px;
     }
   }
 }

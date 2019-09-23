@@ -18,15 +18,22 @@
         %form
           %textarea{placeholder: "キーワードから探す"}
       .products__header__top__mask
-        =fa_icon "search"    
+        =fa_icon "search"
       .products__header__top__right
         .products__header__top__right--order
           = link_to "" do
             = fa_icon "shopping-cart", class: "icon"
         .products__header__top__right--sign_up
-          = link_to "新規会員登録", new_user_registration_path, class: "btn"
-        .products__header__top__right--sign_in                
-          = link_to "ログイン", new_user_session_path, class: "btn"  
+          - if user_signed_in?
+            = link_to edit_user_path(current_user) do
+              =fa_icon "user-circle", class: "user-icon"
+          - else
+            = link_to "新規会員登録", new_user_registration_path, class: "btn"
+        .products__header__top__right--sign_in 
+          - if user_signed_in?  
+            = link_to "ログアウト", destroy_user_session_path, class: "btn", data: { confirm: "ログアウトしますか?" }, method: :delete
+          - else  
+            = link_to "ログイン", new_user_session_path, class: "btn"
     .products__header__banner
       = image_tag "banner.jpg", height: "80px", width: "40%"
     .products__contents
@@ -47,5 +54,7 @@
             %a 帽子
             %a シューズ
       .products__contents__main
-        = render "main_box" 
-   
+        .products__contents__main__box
+          - @products.each do |product|
+            .products__contents__main__box__image
+              = image_tag product.image_url, height: "310px", width: "300px"
