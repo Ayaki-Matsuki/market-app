@@ -176,8 +176,19 @@
           padding-left: 75px;
           font-family:'HiraMinProN-W6';
           font-size: 18px;
-
-
+        }
+        .products__show__contents__details__shopkeeper-group__instagram{
+          .icon{
+            background-color: purple;
+            margin-left: 15px;
+            color:white;
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+            line-height: 10px;
+            border-radius: 40px;
+            padding: 6px;
+          }
         }
       }
       .products__show__contents__details__price-group{

@@ -65,10 +65,14 @@
           ショップ名
         .products__show__contents__details__shopkeeper-group__data
           = @product.shopkeeper
+        .products__show__contents__details__shopkeeper-group__instagram
+          =link_to "https://www.instagram.com", class: "icon" do
+            = fa_icon "instagram"
       .products__show__contents__details__price-group
         .products__show__contents__details__price-group__name
           販売価格
         .products__show__contents__details__price-group__data
+          ￥
           = @product.price
           円(税込)
       .products__show__contents__details__detail-group

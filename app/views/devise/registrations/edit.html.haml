@@ -1,0 +1,28 @@
+#account-page.account-page__session
+  = link_to "F-gram", root_path, class: "h1"
+  .account-page__session__inner.clearfix
+    .account-page__session__inner--header.account-page__session__header
+      %h2 パスワード編集
+      %h5
+        = link_to "Back", :back, class: "back-btn"
+    .account-page__session__inner--bottom.user-form
+      %b ＊全て必須項目です
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          .field-label
+            = f.label :password, "新しいパスワード"
+          .field-input
+            = f.password_field :password, autofocus: true, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :password_confirmation, "新しいパスワードの再確認"
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :current_password, "現在のパスワード"
+          .field-input
+            = f.password_field :current_password, autocomplete: "current-password"
+        .actions
+          = f.submit "編集する", class: 'btn'
