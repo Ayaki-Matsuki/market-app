@@ -1,0 +1,85 @@
+.products__show
+  .products__show__header__links
+    .products__show__header__links--btn
+      %a ABOUT
+      %a NEW
+      %a BEST
+      %a SALE
+      %a RANNKING
+      %a FAVORITE
+      %a PICK UP
+      %a HELP
+      %a INFO
+  .products__show__header__top
+    .products__show__header__top__left
+      =link_to "F-gram", root_path, class:"products__show__header__top__left"
+    .products__show__header__top__form
+      %form
+        %textarea{placeholder: "キーワードから探す"}
+    .products__show__header__top__mask
+      =fa_icon "search"
+    .products__show__header__top__right
+      .products__show__header__top__right--order
+        = link_to "" do
+          = fa_icon "shopping-cart", class: "icon"
+      .products__show__header__top__right--sign_up
+        - if user_signed_in?
+          = link_to edit_user_path(current_user) do
+            =fa_icon "user-circle", class: "user-icon"
+        - else
+          = link_to "新規会員登録", new_user_registration_path, class: "btn"
+      .products__show__header__top__right--sign_in 
+        - if user_signed_in?  
+          = link_to "ログアウト", destroy_user_session_path, class: "btn", data: { confirm: "ログアウトしますか?" }, method: :delete
+        - else  
+          = link_to "ログイン", new_user_session_path, class: "btn"
+  .products__show__header__banner
+    = image_tag "banner.jpg", height: "80px", width: "40%"
+  .products__show__contents
+    .products__show__contents__side
+      .products__show__contents__side__category
+        CATEGORY
+        .products__show__contents__side__category__genre
+          %a シャツ
+          %a Tシャツ/カットソー
+          %a ニット
+          %a パーカー
+          %a スウェット
+          %a ボトムス
+          %a アウター
+          %a バック
+          %a ファッション雑貨
+          %a 小物/財布
+          %a 帽子
+          %a シューズ
+    .products__show__contents__img
+      = image_tag @product.image_url, height: "520px", width: "550px"
+    .products__show__contents__details
+      .products__show__contents__details__title-group
+        .products__show__contents__details__title-group__name
+          商品名
+        .products__show__contents__details__title-group__data
+          = @product.title
+      .products__show__contents__details__shopkeeper-group
+        .products__show__contents__details__shopkeeper-group__name
+          ショップ名
+        .products__show__contents__details__shopkeeper-group__data
+          = @product.shopkeeper
+        .products__show__contents__details__shopkeeper-group__instagram
+          =link_to "https://www.instagram.com", class: "icon" do
+            = fa_icon "instagram"
+      .products__show__contents__details__price-group
+        .products__show__contents__details__price-group__name
+          販売価格
+        .products__show__contents__details__price-group__data
+          ￥
+          = @product.price
+          円(税込)
+      .products__show__contents__details__detail-group
+        .products__show__contents__details__detail-group__name
+          商品詳細
+        .products__show__contents__details__detail-group__data
+          = @product.detail
+      .products__show__contents__details__buy-cart
+        = link_to "カートに入れる", root_path, class: "btn"
+

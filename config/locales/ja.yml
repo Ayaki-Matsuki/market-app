@@ -215,3 +215,4 @@ ja:
         email: メールアドレス
         address: 住所
         phonenumber: 電話番号
+        current_password: 現在のパスワード
