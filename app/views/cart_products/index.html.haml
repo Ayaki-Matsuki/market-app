@@ -21,8 +21,7 @@
         =fa_icon "search"
       .products__header__top__right
         .products__header__top__right--order
-          = link_to cart_products_path do
-            = fa_icon "shopping-cart", class: "icon"
+          = link_to "買い物を続ける", root_path, class: "btn-continue"
         .products__header__top__right--sign_up
           - if user_signed_in?
             = link_to edit_user_path(current_user) do
@@ -54,7 +53,28 @@
             %a 帽子
             %a シューズ
       .products__contents__main
-        .products__contents__main__box
-          - @products.each do |product|
-            .products__contents__main__box__image
-              = link_to image_tag(product.image_url, height: "310px", width: "300px"), new_product_cart_product_path(product)
+        .products__contents__main__block
+          注文内容(
+          = @cart_products.count
+          )
+        .products__contents__main__detail
+          %d 画像
+          %c 商品名
+          %a 数量
+          %a 価格
+          %a 合計
+          %e 設定
+        .products__contents__main__order
+          =render @cart_products
+        .products__contents__main__date
+          最短お届け日
+          = @now.since(2.days).strftime("%Y年%m月%d日")
+        .products__contents__main__total
+          .products__contents__main__total-title
+            最終決済金額
+          .products__contents__main__total-price
+            ¥      
+            =  @total_price
+            円(税込)
+          .products__contents__main__total-btn
+            = link_to '決済する', root_path, notice: 'カートの商品を追加しました', data: { confirm: "決済確定しますか?" }, class: "btn"

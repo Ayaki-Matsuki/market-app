@@ -63,7 +63,7 @@
       border-radius:0 5px 5px 0;
     }
     .products__show__header__top__right{
-      width: 25%;
+      width: 28%;
       float: right;
       display: flex;
       line-height: 114px;
@@ -75,7 +75,7 @@
         font-size: 30px;
         padding: 10px;
         border-radius:5px;
-        margin-right: 30px;
+        margin-right: 50px;
       }
       .user-icon{
         margin-left: 30px;
@@ -84,10 +84,10 @@
         font-size: 30px;
         padding: 10px;
         border-radius:5px;
-        margin-right: 30px;
+        margin-right: 20px;
       }
       .btn{
-        margin: 0 10px;
+        margin: 0 5px;
         color: white;
         background-color:#222222;
         font-size: 18px;
@@ -179,7 +179,7 @@
         }
         .products__show__contents__details__shopkeeper-group__instagram{
           .icon{
-            background-color: purple;
+            background-color: rgb(189, 69, 189);
             margin-left: 15px;
             color:white;
             font-size: 25px;
@@ -215,17 +215,29 @@
         }
       }
       .products__show__contents__details__buy-cart{
-        padding-top: 120px; 
-        padding-left: 180px;
-        .btn{
-          color: white;
-          text-decoration: none;
-          background-color: #222222;
-          padding: 25px;
-          margin-right: 20px;
-          border-radius:5px;
-          text-decoration: none;
-        } 
+        padding-top: 50px; 
+        padding-left: 150px;
+        .products__show__contents__details__buy-cart__quantity{
+          margin-bottom: 20px;
+          .text{
+            border-radius:5px;
+            border:1px solid #222222;
+            padding: 0px 5px;
+            height: 30px;
+            width: 150px;
+          }
+        }
+        .products__show__contents__details__buy-cart__submit{
+          .btn{
+            color: white;
+            text-decoration: none;
+            background-color: #222222;
+            padding: 25px;
+            margin-right: 20px;
+            border-radius:5px;
+            text-decoration: none;
+          }
+        }
       }
     }
   }

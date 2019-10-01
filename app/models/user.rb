@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :phonenumber, presence: true
   validates :address, presence: true
   validates :name, presence: true
+
+  has_many :carts
 end
