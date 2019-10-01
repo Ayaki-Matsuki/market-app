@@ -20,7 +20,7 @@
       =fa_icon "search"
     .products__show__header__top__right
       .products__show__header__top__right--order
-        = link_to "" do
+        = link_to cart_products_path(current_user) do
           = fa_icon "shopping-cart", class: "icon"
       .products__show__header__top__right--sign_up
         - if user_signed_in?
@@ -81,5 +81,8 @@
         .products__show__contents__details__detail-group__data
           = @product.detail
       .products__show__contents__details__buy-cart
-        = link_to "カートに入れる", root_path, class: "btn"
-
+        = form_for [@product, @cart_product] do |f|
+          .products__show__contents__details__buy-cart__quantity
+            = f.text_field :quantity, as: :select, collection: 1..CartProduct::MAX_QUANTITY, placeholder: "数量を入れてください", class:"text"
+          .products__show__contents__details__buy-cart__submit
+            = f.submit "カートに入れる", class: "btn"

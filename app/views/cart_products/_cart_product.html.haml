@@ -1,0 +1,16 @@
+.products__contents__main__order__box
+  .products__contents__main__order__box__img
+    = image_tag cart_product.product.image_url, size: "150x150"
+  .products__contents__main__order__box__title
+    = cart_product.product.title
+  .products__contents__main__order__box__quantity
+    = cart_product.quantity
+    個
+  .products__contents__main__order__box__price
+    ¥
+    = cart_product.product.price
+  .products__contents__main__order__box__sum
+    ¥
+    = (cart_product.product.price * cart_product.quantity)
+  .products__contents__main__order__box__destroy
+    = link_to '削除', [cart_product.product, cart_product], method: :delete, data: { confirm: '削除しますか？' }, class: "btn"
